@@ -32,8 +32,8 @@ public class CLUtilityClass {
     @BeforeTest
     public void CLbrowserlaunch(){
 
-        WebDriverManager.edgedriver().setup();
-        driver = new EdgeDriver();
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.get("https://thinking-tester-contact-list.herokuapp.com/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
