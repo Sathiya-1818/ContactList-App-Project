@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite">
+    <parameter name="url" value="https://thinking-tester-contact-list.herokuapp.com/"></parameter>
+    <test thread-count = "5" name="RegressionTest">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="tests.T1_CLRegisterTest"/>
+        </classes>
+    </test>
+    <test thread-count="5" name = "Smoke Test">
+        <parameter name="browser" value="edge"></parameter>
+    <classes>
+        <class name="tests.T4_CLRegressionTest"/>
+    </classes>
+</test>
+    <test thread-count="5" name = "Validation Test">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="tests.T5_CLInvalidLoginTest"/>
+        </classes>
+    </test>
+</suite>
